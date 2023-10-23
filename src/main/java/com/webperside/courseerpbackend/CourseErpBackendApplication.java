@@ -1,13 +1,12 @@
 package com.webperside.courseerpbackend;
 
 import com.webperside.courseerpbackend.models.mybatis.user.User;
-import com.webperside.courseerpbackend.service.security.AccessTokenManager;
+import com.webperside.courseerpbackend.services.security.AccessTokenManager;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.transaction.annotation.Transactional;
 
 @SpringBootApplication
 @RequiredArgsConstructor
@@ -24,13 +23,17 @@ public class CourseErpBackendApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        User user = User.builder()
-                .email("zaurmusatafa1999@gmail.com")
-                .build();
-        user.setId(1L);
-
-        System.out.println(accessTokenManager.generator(user));
-
+//        User user = User.builder()
+//                .email("zaurmusatafa1999@gmail.com")
+//                .build();
+//        user.setId(1L);
+//        final String token = accessTokenManager.generate(user);
+//
+//        System.out.println(token);
+//
+//        System.out.println(
+//                accessTokenManager.read(token).get("email", String.class)
+//        );
 
 
 //        log.info("public key {}", securityProperties);

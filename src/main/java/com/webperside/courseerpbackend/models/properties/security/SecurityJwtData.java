@@ -1,4 +1,5 @@
 package com.webperside.courseerpbackend.models.properties.security;
+
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;

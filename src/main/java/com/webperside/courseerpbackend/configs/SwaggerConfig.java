@@ -11,13 +11,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-//@SecurityScheme(
-//        name = "Authorization",
-//        scheme = "bearer",
-//        bearerFormat = "JWT",
-//        type = SecuritySchemeType.HTTP,
-//        in = SecuritySchemeIn.HEADER
-//)
+@SecurityScheme(
+        name = "Authorization",
+        scheme = "bearer",
+        bearerFormat = "JWT",
+        type = SecuritySchemeType.HTTP,
+        in = SecuritySchemeIn.HEADER
+)
 public class SwaggerConfig {
 
     @Bean
@@ -35,9 +35,9 @@ public class SwaggerConfig {
                 .description("This API exposes endpoints to manage tutorials.")
                 .termsOfService("http://www.bezkoder.com/terms");
 
-        return new OpenAPI().info(info);
-//                .addSecurityItem(
-//                        new SecurityRequirement().addList("Authorization")
-//                );
+        return new OpenAPI().info(info)
+                .addSecurityItem(
+                        new SecurityRequirement().addList("Authorization")
+                );
     }
 }

@@ -1,12 +1,15 @@
 package com.webperside.courseerpbackend;
 
+import com.webperside.courseerpbackend.models.enums.user.UserStatus;
 import com.webperside.courseerpbackend.models.mybatis.user.User;
 import com.webperside.courseerpbackend.services.security.AccessTokenManager;
+import com.webperside.courseerpbackend.services.user.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
 @RequiredArgsConstructor
@@ -20,13 +23,31 @@ public class CourseErpBackendApplication implements CommandLineRunner {
 //    private final SecurityProperties securityProperties;
 
     private final AccessTokenManager accessTokenManager;
+    private final UserService userService;
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     public void run(String... args) throws Exception {
 //        User user = User.builder()
+//                .name("Zaur")
+//                .surname("Mustafazade")
+//                .password(passwordEncoder.encode("123123"))
+//                .roleId(1L)
+//                .phoneNumber("+994557414141")
+//                .status(UserStatus.ACTIVE)
 //                .email("zaurmusatafa1999@gmail.com")
 //                .build();
-//        user.setId(1L);
+
+//        userService.insert(user);
+//        System.out.println(userService.getByEmail("zaurmusatafa1999@gmail.com"));
+
+
+
+
+
+
+
+
 //        final String token = accessTokenManager.generate(user);
 //
 //        System.out.println(token);

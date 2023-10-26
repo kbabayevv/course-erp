@@ -28,7 +28,7 @@ public class AccessTokenManager implements TokenGenerator<User>, TokenReader<Cla
     public String generate(User obj) {
 
         Claims claims = Jwts.claims();
-        claims.put("email", obj.getEmail());
+        claims.put(EMAIL_KEY, obj.getEmail());
 
         Date now = new Date();
 

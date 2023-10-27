@@ -1,5 +1,6 @@
 package com.webperside.courseerpbackend.controller;
 
+import com.webperside.courseerpbackend.exception.BaseException;
 import com.webperside.courseerpbackend.models.base.BaseResponse;
 import com.webperside.courseerpbackend.services.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ public class TestController {
     @GetMapping("/test/no-auth")
     public BaseResponse<String> testNoAuth() {
 
-//        userService.getByEmail("sdkjfhsdkjfh");
+        userService.getByEmail("sdkjfhsdkjfh");
 
         return BaseResponse.success("Course ERP - No Auth");
     }
